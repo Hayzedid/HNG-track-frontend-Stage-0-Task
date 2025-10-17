@@ -1,0 +1,21 @@
+[build]
+  # No build process needed for static HTML/CSS/JS
+  publish = "."
+
+[build.environment]
+  # No environment variables needed
+
+[[headers]]
+  # Apply security headers to all pages
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[redirects]]
+  # Redirect any 404s to the main page (single page app behavior)
+  from = "/*"
+  to = "/index.html"
+  status = 404

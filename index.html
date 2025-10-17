@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card - Abdul</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <article class="profile-card" data-testid="test-profile-card">
+            <header class="profile-header">
+                <figure class="avatar-container">
+                    <img 
+                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" 
+                        alt="Abdul's profile picture" 
+                        class="avatar"
+                        data-testid="test-user-avatar"
+                    >
+                </figure>
+                <div class="profile-info">
+                    <h1 class="user-name" data-testid="test-user-name">Abdul Rahman</h1>
+                    <p class="user-bio" data-testid="test-user-bio">
+                        Passionate frontend developer with a love for creating accessible and beautiful web experiences. 
+                        Always learning new technologies and contributing to open source projects.
+                    </p>
+                    <div class="timestamp" data-testid="test-user-time" aria-label="Current timestamp in milliseconds">
+                        <!-- Time will be populated by JavaScript -->
+                    </div>
+                </div>
+            </header>
+
+            <nav class="social-links" data-testid="test-user-social-links" aria-label="Social media links">
+                <h2 class="section-title">Connect with me</h2>
+                <ul class="social-list">
+                    <li>
+                        <a 
+                            href="https://twitter.com/abdul" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            data-testid="test-user-social-twitter"
+                            aria-label="Follow Abdul on Twitter"
+                        >
+                            Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                            href="https://github.com/abdul" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            data-testid="test-user-social-github"
+                            aria-label="View Abdul's GitHub profile"
+                        >
+                            GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                            href="https://linkedin.com/in/abdul" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            data-testid="test-user-social-linkedin"
+                            aria-label="Connect with Abdul on LinkedIn"
+                        >
+                            LinkedIn
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <section class="hobbies-section">
+                <h2 class="section-title">Hobbies & Interests</h2>
+                <ul class="hobbies-list" data-testid="test-user-hobbies">
+                    <li>Web Development</li>
+                    <li>Photography</li>
+                    <li>Reading Tech Blogs</li>
+                    <li>Playing Chess</li>
+                    <li>Hiking</li>
+                </ul>
+            </section>
+
+            <section class="dislikes-section">
+                <h2 class="section-title">Things I Dislike</h2>
+                <ul class="dislikes-list" data-testid="test-user-dislikes">
+                    <li>Poorly written documentation</li>
+                    <li>Inaccessible websites</li>
+                    <li>Spaghetti code</li>
+                    <li>Long meetings without agenda</li>
+                    <li>Cold coffee</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
