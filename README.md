@@ -4,7 +4,7 @@ A responsive, accessible profile card component built with semantic HTML, modern
 
 ## 🚀 Live Demo
 
-[Live Demo Link](https://your-netlify-url.netlify.app) *(Update this with your actual deployment URL)*
+[Live Demo Link](https://funny-faun-bcfa9e.netlify.app/)
 
 ## 📋 Features
 
