@@ -9,7 +9,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: #333;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #0B2559 0%, #183B59 50%, #2A5159 100%);
     min-height: 100vh;
     padding: 20px;
 }
@@ -43,7 +43,7 @@ main {
     flex-direction: column;
     align-items: center;
     padding: 40px 30px 30px;
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background: linear-gradient(135deg, #2A5159 0%, #327355 100%);
     color: white;
     text-align: center;
 }
@@ -105,7 +105,7 @@ main {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 20px;
-    color: #2c3e50;
+    color: #183B59;
     position: relative;
 }
 
@@ -116,7 +116,7 @@ main {
     left: 0;
     width: 50px;
     height: 3px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #327355 0%, #5C8C46 100%);
     border-radius: 2px;
 }
 
@@ -136,7 +136,7 @@ main {
 .social-list a {
     display: block;
     padding: 12px 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #327355 0%, #5C8C46 100%);
     color: white;
     text-decoration: none;
     border-radius: 25px;
@@ -164,7 +164,7 @@ main {
 
 .social-list a:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 10px 20px rgba(50, 115, 85, 0.3);
 }
 
 .social-list a:focus {
@@ -190,13 +190,13 @@ main {
 }
 
 .hobbies-list li {
-    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-    color: #2c3e50;
+    background: linear-gradient(135deg, #2A5159 0%, #327355 100%);
+    color: white;
 }
 
 .dislikes-list li {
-    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-    color: #8b4513;
+    background: linear-gradient(135deg, #183B59 0%, #2A5159 100%);
+    color: white;
 }
 
 .hobbies-list li:hover,
