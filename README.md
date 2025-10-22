@@ -1,14 +1,14 @@
-# Profile Card - Frontend Wizards Stage 0 Task
+# Frontend Wizards - Stage 1 Multi-Page Application
 
-A responsive, accessible profile card component built with semantic HTML, modern CSS, and vanilla JavaScript. This project meets all the requirements for the Frontend Wizards Stage 0 task.
+A responsive, accessible multi-page web application featuring a profile card, contact form with validation, and an about me page. Built with semantic HTML, modern CSS, and vanilla JavaScript. This project builds on Stage 0 and meets all requirements for the Frontend Wizards Stage 1 task.
 
-## 🚀 Live Demo
+## Live Demo
 
 [Live Demo Link](https://funny-faun-bcfa9e.netlify.app/)
 
-## 📋 Features
+## Features
 
-### ✅ Core Requirements Met
+### Stage 0 Requirements (Profile Card)
 - **Profile card root container** - `data-testid="test-profile-card"`
 - **Name (plain text)** - `data-testid="test-user-name"`
 - **Short biography** - `data-testid="test-user-bio"`
@@ -18,19 +18,44 @@ A responsive, accessible profile card component built with semantic HTML, modern
 - **Hobbies list** - `data-testid="test-user-hobbies"`
 - **Dislikes list** - `data-testid="test-user-dislikes"`
 
-### 🎨 Design Features
-- **Responsive Design**: Works on mobile, tablet, and desktop
+### Stage 1 Requirements (Multi-Page Application)
+
+#### Contact Us Page
+- **Full name field** - `data-testid="test-contact-name"`
+- **Email field** - `data-testid="test-contact-email"`
+- **Subject field** - `data-testid="test-contact-subject"`
+- **Message field** - `data-testid="test-contact-message"`
+- **Submit button** - `data-testid="test-contact-submit"`
+- **Error messages** - `data-testid="test-contact-error-<field>"`
+- **Success message** - `data-testid="test-contact-success"`
+- **Form validation**: All fields required, email validation, 10+ character message
+- **Accessibility**: Labels linked with `for`, error messages with `aria-describedby`
+
+#### About Me Page
+- **Main container** - `data-testid="test-about-page"`
+- **Bio section** - `data-testid="test-about-bio"`
+- **Goals section** - `data-testid="test-about-goals"`
+- **Confidence areas** - `data-testid="test-about-confidence"`
+- **Future note** - `data-testid="test-about-future-note"`
+- **Extra thoughts** - `data-testid="test-about-extra"`
+- **Semantic structure**: `<main>`, `<section>`, proper headings
+
+### Design Features
+- **Multi-Page Navigation**: Sticky navigation with active page indicators
+- **Responsive Design**: Works seamlessly on mobile, tablet, and desktop
 - **Modern UI**: Gradient backgrounds, smooth animations, hover effects
-- **Accessibility**: Semantic HTML, keyboard navigation, focus styles
-- **Performance**: Optimized CSS and JavaScript
+- **Form Validation**: Real-time validation with accessible error messages
+- **Accessibility**: Semantic HTML, keyboard navigation, focus styles, ARIA attributes
+- **Performance**: Optimized CSS and JavaScript with modular architecture
 
-### 🔧 Technical Implementation
-- **Semantic HTML5**: Uses `<article>`, `<header>`, `<nav>`, `<section>`, `<figure>`
-- **Modern CSS**: Flexbox and Grid layouts, CSS custom properties
-- **Vanilla JavaScript**: Dynamic timestamp updates, keyboard navigation
-- **Accessibility**: ARIA labels, focus management, reduced motion support
+### Technical Implementation
+- **Semantic HTML5**: Uses `<main>`, `<nav>`, `<article>`, `<header>`, `<section>`, `<figure>`, `<form>`
+- **Modern CSS**: Flexbox and Grid layouts, CSS custom properties, responsive design
+- **Vanilla JavaScript**: Form validation, dynamic updates, keyboard navigation enhancement
+- **Accessibility**: ARIA labels, focus management, screen reader support, reduced motion
+- **Form Handling**: Client-side validation, error messaging, success states
 
-## 🛠️ Local Development
+## Local Development
 
 ### Prerequisites
 - A modern web browser (Chrome, Firefox, Safari, Edge)
@@ -72,21 +97,24 @@ Open your browser and navigate to:
 - Direct file: `file:///path/to/index.html`
 - Local server: `http://localhost:8000`
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 profile-card/
-├── index.html          # Main HTML file with semantic structure
-├── styles.css          # Responsive CSS with modern design
-├── script.js           # JavaScript for dynamic functionality
+├── index.html          # Profile page (Stage 0)
+├── contact.html        # Contact Us page with form validation
+├── about.html          # About Me page with reflections
+├── styles.css          # Responsive CSS for all pages
+├── script.js           # Core JavaScript functionality
+├── contact.js          # Contact form validation logic
 └── README.md           # This file
 ```
 
-## 🧪 Testing
+## Testing
 
 ### Manual Testing Checklist
 
-#### Data Test IDs
+#### Profile Page (Stage 0)
 - [ ] `test-profile-card` - Profile card container exists
 - [ ] `test-user-name` - User name is displayed
 - [ ] `test-user-bio` - Biography paragraph exists
@@ -96,12 +124,39 @@ profile-card/
 - [ ] `test-user-hobbies` - Hobbies list
 - [ ] `test-user-dislikes` - Dislikes list
 
+#### Contact Page (Stage 1)
+- [ ] `test-contact-name` - Full name input field
+- [ ] `test-contact-email` - Email input field
+- [ ] `test-contact-subject` - Subject input field
+- [ ] `test-contact-message` - Message textarea
+- [ ] `test-contact-submit` - Submit button
+- [ ] `test-contact-error-name` - Name error message
+- [ ] `test-contact-error-email` - Email error message
+- [ ] `test-contact-error-subject` - Subject error message
+- [ ] `test-contact-error-message` - Message error message
+- [ ] `test-contact-success` - Success message
+
+#### About Page (Stage 1)
+- [ ] `test-about-page` - Main container
+- [ ] `test-about-bio` - Bio section
+- [ ] `test-about-goals` - Goals section
+- [ ] `test-about-confidence` - Confidence areas section
+- [ ] `test-about-future-note` - Future note section
+- [ ] `test-about-extra` - Extra thoughts section
+
 #### Functionality
+- [ ] Navigation works between all pages
+- [ ] Active page is highlighted in navigation
 - [ ] Timestamp updates every second with `Date.now()`
 - [ ] Social links open in new tab with `rel="noopener noreferrer"`
 - [ ] Avatar has proper alt text
+- [ ] Form validation prevents invalid submissions
+- [ ] Email validation works (name@example.com format)
+- [ ] Message requires minimum 10 characters
+- [ ] Success message shows after valid submission
 - [ ] All interactive elements are keyboard accessible
 - [ ] Focus styles are visible
+- [ ] Error messages are announced to screen readers
 
 #### Responsive Design
 - [ ] Mobile (320px+): Stacked layout
@@ -123,7 +178,7 @@ The JavaScript includes a validation function that checks for all required data-
 validateTestIds();
 ```
 
-## 🚀 Deployment
+## Deployment
 
 ### Netlify (Recommended)
 1. Create a Netlify account
@@ -141,19 +196,28 @@ validateTestIds();
 2. Run `vercel` in the project directory
 3. Follow the prompts
 
-## 🎯 Acceptance Criteria Status
+## Acceptance Criteria Status
 
-- ✅ All required elements with correct data-testids
-- ✅ Semantic HTML5 structure
-- ✅ Dynamic timestamp showing `Date.now()` in milliseconds
-- ✅ Avatar with alt attribute and proper data-testid
-- ✅ Social links with proper attributes and individual testids
-- ✅ Distinct hobbies and dislikes lists
-- ✅ Keyboard navigation and focus styles
-- ✅ Responsive layout for all screen sizes
-- ✅ Accessible design patterns
+### Stage 0 (Profile Card)
+- All required elements with correct data-testids
+- Semantic HTML5 structure
+- Dynamic timestamp showing `Date.now()` in milliseconds
+- Avatar with alt attribute and proper data-testid
+- Social links with proper attributes and individual testids
+- Distinct hobbies and dislikes lists
 
-## 🔧 Customization
+### Stage 1 (Multi-Page Application)
+- Contact Us page with all required fields and data-testids
+- Form validation (required fields, email format, message length)
+- Success message after valid submission
+- About Me page with all required sections and data-testids
+- Semantic HTML structure (`<main>`, `<section>`, proper headings)
+- Navigation between pages
+- Accessibility (labels, ARIA associations, keyboard navigation)
+- Responsive design across all devices
+- Modular, readable, and consistent code
+
+## Customization
 
 ### Changing Profile Information
 Edit the content in `index.html`:
@@ -187,4 +251,4 @@ This project is created for the Frontend Wizards Stage 0 task and is free to use
 
 ---
 
-*Built with ❤️ for Frontend Wizards Stage 0 Task*
+*Built with love for Frontend Wizards Stage 1 Task*
